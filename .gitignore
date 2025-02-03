@@ -39,8 +39,19 @@ terraform.rc
 
 
 # Ignore specific folders
-section01/
+# Decided to ignore all staging folders to avoid issues
+local-dev/ 
+
+# Section 01
 .ipynb_checkpoints/
+data_pgadmin/
+ny_taxi_postgres_data/
+# Section 02
+dbeaver_data/
+postgres_data/
+
 
 # Ignore all JSON files
 *.json
+*.csv
+*.gz

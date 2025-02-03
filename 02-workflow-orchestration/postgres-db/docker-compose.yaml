@@ -1,0 +1,21 @@
+services:
+  pgdatabase:
+    image: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=postgres-zoomcamp
+    volumes:
+      - "./postgres_data:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    environment:
+      - CB_ADMIN_NAME=dbeaver
+      - CB_ADMIN_PASSWORD=dBeaver1
+    ports:
+      - "8078:8978"
+    volumes:
+      - "./dbeaver_data:/opt/cloudbeaver/workspace"
+  
