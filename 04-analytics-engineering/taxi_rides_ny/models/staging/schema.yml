@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_DATABASE', 'awesome-treat-447716-e5') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'de_zoomcamp') }}"
+    tables:
+      - name: green_tripdata
+      - name: yellow_tripdata
